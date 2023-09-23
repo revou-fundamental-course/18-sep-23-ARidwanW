@@ -1,3 +1,4 @@
+/*=============== BASE ===============*/
 body {
     padding: 5px 25px;
 }
@@ -9,6 +10,13 @@ header {
     padding: 10px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*=============== NAVIGATION ===============*/
 .nav__container {
     display: flex;
 }
@@ -33,6 +41,9 @@ header {
     background-color: #ccc;
 }
 
+
+/*=============== HOME ===============*/
+    /*=============== TITLE ===============*/
 .title__container {
     display: flex;
     flex-direction: column;
@@ -41,6 +52,8 @@ header {
     padding: 20px 0;
 }
 
+
+    /*=============== CONTENT ===============*/
 .content__container {
     display: flex;
 }
@@ -56,22 +69,6 @@ header {
     width: 70%;
 }
 
-.content__image {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
-    align-items: center;
-}
-
-.content__image span {
-    color: grey;
-}
-
-.image {
-    width: 100%;
-}
-
 .content__right {
     box-sizing: border-box;
     width: 40%;
@@ -79,6 +76,36 @@ header {
     padding: 20px;
 }
 
+.content__image {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+}
+
+.content__image span {
+    color: grey;
+}
+
+.content__customer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.customer__name {
+    display: flex;
+    flex-direction: column;
+}
+
+
+    /*=============== FORM ===============*/
 form {
     display: flex;
     flex-direction: column;
