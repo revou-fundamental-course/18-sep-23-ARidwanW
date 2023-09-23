@@ -180,3 +180,30 @@ input, select {
     border-radius: 50%;
     width: 1.2em;  
 }
+
+
+
+/*=============== OUR PACKAGE ===============*/
+.section__package .test {
+    background-color: black;
+    padding: 1000px;
+}
+
+
+
+/*=============== CALL US ===============*/
+.section__call .test {
+    background-color: blue;
+    padding: 1500px;
+}
+
+.test {
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 100px;
+}
+
+
+
+
+
