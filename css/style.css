@@ -173,3 +173,10 @@ input, select {
 }
 
 /*=============== PRODUCT ===============*/
+.product__container .circle {
+    display: flex;
+    justify-content: center;
+    background-color: #edf0f4;
+    border-radius: 50%;
+    width: 1.2em;  
+}
