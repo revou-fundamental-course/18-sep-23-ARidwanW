@@ -1,6 +1,7 @@
 /*=============== BASE ===============*/
 body {
     padding: 5px 25px;
+    background-color: antiquewhite;
 }
 
 header {
@@ -107,6 +108,7 @@ main {
 .content__right {
     display: flex;
     flex-direction: column;
+    /* justify-content: flex-start; */
 }
 
 .content__left {        
@@ -116,33 +118,36 @@ main {
 
 .content__right {
     box-sizing: border-box;
-    width: 40%;
+    width: 30%;
     background-color: #edf0f4;
     padding: 20px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
 }
 
 .content__image {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .image {
-    width: 100%;
-    border: 1px solid #edf0f4;
+    width: 70%;
+    /* height: 80%; */
+    border: 1px solid black; /* #edf0f4 */
 }
 
 .content__image span {
     color: grey;
+    padding-top: 30px;
 }
 
 .content__customer {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 50px;
 }
 
 .customer__name {
