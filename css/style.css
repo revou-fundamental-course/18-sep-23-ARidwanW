@@ -6,8 +6,19 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
+    position: relative;
     padding: 10px;
+}
+
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: -35px;
+    right: -35px;
+    border-bottom: 1px solid grey;
 }
 
 main {
