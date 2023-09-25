@@ -306,9 +306,10 @@ input, select {
 
 
 /*=============== OUR PACKAGE ===============*/
-.section__package .test {
-    background-color: black;
-    padding: 1000px;
+.section__package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
