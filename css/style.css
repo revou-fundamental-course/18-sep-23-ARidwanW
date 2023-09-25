@@ -1,7 +1,96 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    /*
+          Purple: hsl(250, 66%, 75%)
+          Blue: hsl(207, 90%, 72%)
+          Another Blue: hsl(207 , 90%, 61%)
+          Pink: hsl(356, 66%, 75%)
+          Teal: hsl(174, 63%, 62%)
+    */
+    --first-hue: 207;
+    --sat: 90%;
+    --lig: 72%;
+    --second-hue: 219;
+    /* --third-hue: 250;
+    --third-sat: 66%;
+    --third-lig: 75%; */
+  
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 57%); /* -4% */
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: hsl(var(--second-hue), 8%, 75%);
+    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--second-hue), 48%, 8%);
+    --container-color: hsl(var(--second-hue), 32%, 12%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semibold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    --padding-5px: 0.3125rem;
+    --padding-10px: 0.625rem;
+    --padding-20px: 0.5rem;
+    --padding-25px: 0.8125rem;
+    --padding-30px: 1.125rem;
+    --padding-35px: 1.4375rem;
+    --padding-40px: 1.75rem;
+    --padding-50px: 2.375rem;
+  }
+
+
+  /* Responsive typography */
+@media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 2.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+      --padding-5px: 0.3125rem;
+      --padding-10px: 0.625rem;
+      --padding-20px: 1.25rem;
+      --padding-25px: 1.5625rem;
+      --padding-30px: 1.875rem;
+      --padding-35px: 2.1875rem;
+      --padding-40px: 2.5rem;
+      --padding-50px: 3.125rem;
+    }
+  }
+
+
 /*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,12 +100,17 @@ button,
 input,
 select,
 button {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
 }
 
 body {
-    padding: 5px 25px;
-    /* background-color: antiquewhite; */
+    /* padding: 5px 25px; */
+    padding: var(--padding-5px) var(--padding-25px);
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-semibold);
 }
 
 header {
@@ -24,16 +118,19 @@ header {
     justify-content: space-between;
     /* border-bottom: 1px solid grey; */
     position: relative;
-    padding: 10px;
+    padding: var(--padding-10px);
 }
 
 header::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: -5px;
-    left: -35px;
-    right: -35px;
+    /* bottom: 0.3125rem;
+    left: -2.1875rem;
+    right: -2.1875rem; */
+    bottom: calc(var(--padding-5px) * -1);
+    left: calc(var(--padding-35px) * -1);
+    right: calc(var(--padding-35px) * -1);
     border-bottom: 1px solid grey;
 }
 
@@ -50,8 +147,8 @@ main {
 }
 
 .logo__container {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semibold)
 }
 
 .nav__item {
@@ -60,7 +157,8 @@ main {
     /* border-collapse: collapse;  */
     display: flex;
     align-items: center; 
-    padding: 5px 20px 5px 20px;
+    /* padding: 5px 20px 5px 20px; */
+    padding: var(--padding-5px) var(--padding-20px);
     text-decoration: none;
     color: black;
 }
@@ -70,11 +168,13 @@ main {
 }
 
 .nav__home {
-    border-radius: 5px 0px 0px 5px;
+    /* border-radius: 5px 0px 0px 5px; */
+    border-radius: var(--padding-5px) 0 0 var(--padding-5px);
 }
 
 .nav__call {
-    border-radius: 0 5px 5px 0;
+    /* border-radius: 0 5px 5px 0; */
+    border-radius: 0 var(--padding-5px) var(--padding-5px) 0;
 }
 
 .nav__item:hover {
@@ -110,7 +210,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 40px;
+    /* padding: 20px 0 40px; */
+    padding: var(--padding-20px) 0 var(--padding-40px);
 }
 
 .title h1{
@@ -119,7 +220,8 @@ main {
 }
 
 .sub__title {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin-bottom: var(--padding-20px);
 }
 
 
@@ -148,7 +250,8 @@ main {
     background-color: #edf0f4;
     padding: 40px;
     /* border: 1px solid black; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: var(--padding-5px);
 }
 
 .content__image {
@@ -175,7 +278,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: var(--padding-50px);
 }
 
 .content__customer .circle {
@@ -219,11 +323,14 @@ button {
     justify-content: center;
     /* border: 1px solid black; */
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
+    border-radius: var(--padding-5px);
     background-color: #29323d;
     color: #ffffff;
-    padding: 10px 0;
-    margin-top: 10px;
+    /* padding: 10px 0;
+    margin-top: 10px; */
+    padding: var(--padding-10px);
+    margin-top: var(--padding-10px);
     cursor: pointer;
 }
 
@@ -233,10 +340,13 @@ button:hover {
 }
 
 input, select {
-    margin-bottom: 10px;
-    padding: 12px 8px;
+    /* margin-bottom: 10px;
+    padding: 12px 8px; */
+    margin-bottom: var(--padding-10px);
+    padding: 0.75rem 0.5rem;
     border: 2px solid #c9d3dd;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: var(--padding-5px);
 }
 
 .form__title {
@@ -252,7 +362,8 @@ input, select {
 }
 
 .form__title-container {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    margin-bottom: var(--padding-50px);
 }
 
 
@@ -295,7 +406,8 @@ input, select {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    margin-top: 25px;
+    /* margin-top: 25px; */
+    margin-top: var(--padding-25px);
 }
 
 .product__point-text {
