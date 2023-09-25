@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== BASE ===============*/
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 button,
 input,
@@ -114,6 +118,10 @@ main {
     margin-bottom: 0;
 }
 
+.sub__title {
+    margin-bottom: 20px;
+}
+
 
     /*=============== CONTENT ===============*/
 .content__container {
@@ -175,7 +183,8 @@ main {
     justify-content: center;
     background-color: #edf0f4;
     border-radius: 50%;
-    height: 2.2rem;
+    /* height: 2.2rem; */
+    /* width: 2rem; */
     font-size: 2rem;
     padding: 0.45rem;
     margin-right: 1rem;
@@ -233,29 +242,65 @@ input, select {
 .form__title {
     font-weight: bold;
     color: #29323d;
-    /* padding-top: 10px; */
     font-size: 1.1rem;
 }
 
 .form__subtitle {
     color: #29323d;
     padding-top: 10px;
-    margin-bottom: 50px;
     font-size: .9rem;
+}
+
+.form__title-container {
+    margin-bottom: 50px;
 }
 
 
 /*=============== PRODUCT ===============*/
 .product__container {
+    display: flex;
+    justify-content: center;
     margin-top: 5rem;
 }
 
-.product__container .circle {
+.product {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__space {
+    box-sizing: border-box;
+    width: 30%;
+}
+
+.product__info {
+    box-sizing: border-box;
+    width: 80%;
+}
+
+.product__point .circle {
     display: flex;
     justify-content: center;
     background-color: #edf0f4;
     border-radius: 50%;
-    width: 1.2em;  
+    width: 1.5em;  
+    padding: 0.45rem;
+    margin-right: 1rem;
+}
+
+.product__point {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 25px;
+}
+
+.product__point-text {
+    font-size: 0.9rem;
+    width: 50%;
 }
 
 
