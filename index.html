@@ -6,13 +6,9 @@
 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- https://placehold.co/600x400?font=roboto -->
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style.css">
-
-    <!--=============== JS ===============-->
-    <script src="js/script.js"></script>
 
     <title>E-Groceries</title>
 </head>
@@ -20,84 +16,76 @@
     <!--=============== HEADER ===============-->
     <header>
         <div class="logo__container">
-            E-Groceries
+            <h2>E-Groceries</h2>
         </div>
 
         <nav class="nav__container">
-            <!-- !<table>    /* !padding hover akan terlihat tidak menyatu jika menggunakan table */
-                <tr> -->
-                    <a href="#title" class="nav__home nav__item">Home</a>
-                    <a href="#our__package" class="nav__package nav__item">Our Package</a>
-                    <a href="#call__us" class="nav__call nav__item">Call Us</a>
-                <!-- </tr>
-            </table> -->
+            <a href="#title" class="nav__item nav__home">Home</a>
+            <a href="#section__our-package" class="nav__item nav__our-package">Our Package</a>
+            <a href="#section__call-us" class="nav__item nav__call-us">Call Us</a>
         </nav>
     </header>
-
 
     <!--=============== MAIN ===============-->
     <main>
         <!--=============== HOME ===============-->
-        <section class="section__home" id="home">
+        <div class="section__home">
             <div class="title__container">
-                <div class="title" id="title">
-                    <h1>Top Rated E-Groceries Shop in Indonesian</h1>
-                </div>
-
-                <div class="sub__title">
-                    <span>Everyday with best ingredients</span>
-                </div>
+                <div class="title" id="title"><h1>Top Rated E-Groceries Shop in Indonesian</h1></div>
+                <div class="subtitle"><span>Everyday with best ingredients</span></div>
             </div>
 
+             <!--=============== CONTENT ===============-->
             <div class="content__container">
+                 <!--=============== CONTENT LEFT ===============-->
                 <div class="content__left">
-                    <div class="content__image">
-                        <img class="image" src="./assets/img/placeholder-image.png" alt="slider image">
-                        <span class="image-tag"><i>"Setiap hari beli sayur buah yang fresh di sini"</i></span>
+                    <div class="content__left-image">
+                        <img class="image" src="assets/placeholder-image.png" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Setiap hari beli sayur buah yang fresh di sini</i></span>
+                    </div>
 
-                        <div class="content__customer">
-                            <div class="circle">
-                                <i class='bx bx-user'></i>
-                            </div>
-                            
-                            <div class="customer__name">
-                                <span><b>Nama Panjang</b></span>
-                                <span><i>Pekerjaan, 23</i></span>
-                            </div>
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Nama Customer</b></span>
+                            <span class="pekerjaan__umur"><i>Pekerjaan, 23</i></span>
                         </div>
                     </div>
+
+                    <div class="content__left-bar"></div>
                 </div>
 
+                 <!--=============== CONTENT RIGHT ===============-->
                 <div class="content__right">
                     <div class="form__title-container">
-                        <div class="form__title">
-                            Contact Us
-                        </div>
-
-                        <div class="form__subtitle">
-                            Sales akan menghubungin anda 1x24 jam setelah data kami terima
-                        </div>
+                        <h3 class="form__title">Contact US</h3>
+                        <span class="form__subtitle">Sales akan menghubungi anda 1x24 jam setelah data kami terima</span>
                     </div>
 
+                     <!--=============== FORM ===============-->
                     <form action="/">
                         <label for="your-name">Your Name:</label>
                         <input type="text" name="your-name" id="your-name" placeholder="First and last name">
 
-                        <label for="email">Email Address:</label>
+                        <label for="email">Email address:</label>
                         <input type="email" name="email" id="email" placeholder="example@email.com">
 
                         <label for="interest">What are you interested in?</label>
-                        <select name="interest" id="interest" aria-placeholder="Select option">
-                            <option value="" selected>Select option</option>    <!-- *bisa ditambah <disabled> agar tidak bisa dipilih-->
+                        <select name="interest" id="interest">
+                            <option value="" selected>Select option</option>
                             <option value="football">Football</option>
                             <option value="badminton">Badminton</option>
                         </select>
 
-                        <button type="submit" id="button"><b>SEND</b></button>
+                        <button type="submit" id="send-button"><b>SEND</b></button>
                     </form>
                 </div>
             </div>
 
+             <!--=============== PRODUCT ===============-->
             <div class="product__container">
                 <div class="product">
                     <div class="product__info">
@@ -136,109 +124,147 @@
                     </div>
                 </div>
 
-                <div class="product__space"></div>
+                <div class="product__space">
+
+                </div>
             </div>
-        </section>
+        </div>
 
 
         <!--=============== OUR PACKAGE ===============-->
-        <section class="section__package" id="our__package">
-            <div class="package__header">
+        <!-- <section class="section__package"></section> -->
+        <div class="section__our-package" id="section__our-package">
+            <div class="our__package-header">
                 <h1>Our Package</h1>
             </div>
 
-            <div class="package__content">
-                <div class="package__content-top">
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+            <div class="our__package-content-container">
+                <div class="our__package-content">
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-bulb'></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Fresh Vegetable</h3>
+                                <!-- <span>Sayuran segar langsung dari sumber pertanian terbaik</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Sayuran segar langsung dari sumber pertanian terbaik</span>
                     </div>
 
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-bulb'></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Fresh Fruit</h3>
+                                <!-- <span>Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</span>
                     </div>
 
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-bulb'></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Instant Delivery</h3>
+                                <!-- <span>Di kirim instan oleh kurir yang telah di training dengan SOP untuk menjaga kondisi belanja kamu</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Di kirim instan oleh kurir yang telah di training dengan SOP untuk menjaga kondisi belanja kamu</span>
                     </div>
                 </div>
 
-                <div class="package__content-bottom">
-                    <div class="package__bar"></div>
+                <div class="our__package-bar"></div>
 
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+                <div class="our__package-content">
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bxs-star' ></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Kitchen Ingredient</h3>
+                                <!-- <span>Bumbu dapur lengkap untuk keperluan memasak kamu</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Bumbu dapur lengkap untuk keperluan memasak kamu</span>
                     </div>
 
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bxs-star' ></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Kitchen Set</h3>
+                                <!-- <span>Segala jenis alat masak untuk membantu kamu memasak</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Segala jenis alat masak untuk membantu kamu memasak</span>
                     </div>
 
-                    <div class="package__point">
-                        <div class="circle">
-                            lampu
-                        </div>
-                        
-                        <div class="package__point-text">
-                            <div class="package__text-title"><b>Fresh Vegetable</b></div>
+                    <div class="package__point-container">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bxs-star' ></i>
+                            </div>
 
-                            <div class="package__text-text">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                            <div class="package__point-title">
+                                <h3>Bundling Set</h3>
+                                <!-- <span>Bingung masak apa? sudah tersedia paket untuk kamu masak di dapur mu</span> -->
+                            </div>
                         </div>
+
+                        <span class="package__point-text">Bingung masak apa? sudah tersedia paket untuk kamu masak di dapur mu</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
 
         <!--=============== CALL US ===============-->
-        <section class="section__call" id="call__us">
-            <div class="test"></div>
-        </section>
+        <!-- <section class="section__call-us"></section> -->
+        <div class="section__call-us" id="section__call-us">
+            <div class="call__us-header">
+                <h1>Your Closing Argument Headline</h1>
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos officiis possimus sed, deserunt sint molestiae at nam quasi nobis sequi repellendus dolore enim, est id. Repudiandae possimus autem assumenda voluptates.</span>
+            </div>
+
+            <div class="call__us-button">
+                <button id="call-action-button"><b>CALL TO ACTION</b></button>
+            </div>
+        </div>
     </main>
-
-
-    <!--=============== FOOTER ===============-->
-    <footer>
-
-    </footer>
     
+     <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <h3>E-Groceries</h3>
+        <div class="policy">
+            <a href="/" class="terms-of-service">Terms of Service</a>
+            <a href="/" class="privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            <span>&copy 2019 &nbsp; E-Groceries</span>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/script.js"></script>
 </body>
 </html>
