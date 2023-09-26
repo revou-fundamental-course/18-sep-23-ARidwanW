@@ -2,73 +2,103 @@
 //         "Apabila sales belum menghubungi 1x24 jam setelah anda mengirimkan data" +
 //         "Silahkan input ulang data."; 
 
-function validateForm() {
-    const name = document.forms["contact-form"]["your-name"].value;
-    const email = document.forms["contact-form"]["email"].value;
+// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    var errorName = document.getElementById("error-name");
-    var errorEmail = document.getElementById("error-email");
-    var sendSuccess = document.getElementById("send-success");
-    var tag = true;
+// * validate nama
+function validateName() {
+    // var nameValue = document.getElementById("your-name").value;
+    const nameValue = document.forms["contact-form"]["your-name"].value;
 
-    removeError(errorName, errorEmail);
-
-    if (name == "") {
-        errorName.innerHTML = "Nama tidak boleh kosong!"
-        tag = false;
-    } else if (email == "") {
-        errorEmail.innerHTML = "Email tidak boleh kosong!"
-        tag = false;
+    if (nameValue === "" ) {
+        document.getElementById("error-name").innerHTML = "Nama tidak boleh kosong!";
+        return false;
     }
 
-    if (!validateEmail(email)) {
-        errorEmail.innerHTML = "Email tidak valid!"
-        return false
-    }
-
-    if (tag) {
-        showSuccessOverlay(sendSuccess);
-    }
-
-    return tag
+    return true;
 }
 
-function removeError (errorName, errorEmail) {
-    if (errorName){
-        errorName.innerHTML = "";
-    }
 
-    if (errorEmail) {
-        errorEmail.innerHTML = "";
-    }
-}
-
-function validateEmail(email) {
-    // ! Regex definition
+// * validate email
+function validateEmail() {
+    // var emailValue = document.getElementById("email").value;
+    const emailValue = document.forms["contact-form"]["email"].value;
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    // ! Cocoklogi regex
-    return emailRegex.test(email);
-}
-
-function showSuccessOverlay(sendSuccess) {
-    sendSuccess.innerHTML = "Terima Kasih! Data anda telah kami terima. Silahkan tunggu beberapa saat." +
-                            "Apabila sales belum menghubungi 1x24 jam setelah anda mengirimkan data" +
-                            "Silahkan input ulang data."; 
-
-    document.getElementById("success-overlay").style.display = "flex";
-
-    document.getElementById("close-button").addEventListener("click", closeSuccessOverlay)
-}
-
-function closeSuccessOverlay() {
-    document.getElementById("success-overlay").style.display = "none";
-}
-
-
-// ! send button click 
-document.forms["contact-form"].addEventListener("submit", function(e) {
-    if (!validateForm()) {
-        e.preventDefault();     // ! Mencegah pengiriman form jika validasi gagal
+    if (emailValue === ""){
+        document.getElementById("error-email").innerHTML = "Email tidak boleh kosong!";
+        return false;
+    } else if (!emailRegex.test(emailValue)) {
+        document.getElementById("error-email").innerHTML = "Email tidak valid!";
+        return false;
     }
-})
+
+    return true;
+}
+
+
+// * validasi interest (not required)
+function validateInterest() {
+    // var interestValue = document.getElementById("interest").value;
+    const interestValue = document.forms["contact-form"]["interest"].value;
+
+    // * not requred
+    return true;
+}
+
+function removeError() {
+    var errorName = document.getElementById("error-name");
+    var errorEmail = document.getElementById("error-email");
+    var errorInterest = document.getElementById("error-interest");
+
+    errorName.innerHTML = "";
+    errorEmail.innerHTML = "";
+    errorInterest.innerHTML = "";
+
+    return true;
+}
+
+function removeValue() {
+    const nameValue = document.forms["contact-form"]["your-name"].value;
+    const emailValue = document.forms["contact-form"]["email"].value;
+    const interestValue = document.forms["contact-form"]["interest"].value;
+
+    nameValue.innerHTML = "";
+    emailValue.innerHTML = "";
+    interestValue.innerHTML = "";
+}
+
+
+// ! validasi form
+function validateForm() {
+    removeError();
+
+    var nameValid = validateName();
+    var emailValid = validateEmail();
+    var interestValid = validateInterest();
+
+    // return nameValid && emailValid && interestValid;
+
+    // cek semua validasi
+    if (nameValid && emailValid && interestValid) {
+        showSuccessOverlay();
+    }
+
+    return false;
+}
+
+function showSuccessOverlay() {
+    var sendSuccess = document.getElementById("send-success");
+    sendSuccess.innerHTML = "Terima Kasih! Data anda telah kami terima. Silahkan tunggu beberapa saat." +
+                            " Apabila sales belum menghubungi 1x24 jam setelah anda mengirimkan data" +
+                            " Silahkan input ulang data."; 
+
+    var successOverlay = document.getElementById("success-overlay");
+    successOverlay.style.display = "flex";
+
+    document.getElementById("close-button").addEventListener("click", function() {
+        successOverlay.style.display = "none";
+    });
+}
+
+
+

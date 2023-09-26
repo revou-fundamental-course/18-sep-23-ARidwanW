@@ -185,7 +185,7 @@ header h2 {
 main {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
 }
 
 
@@ -193,7 +193,7 @@ main {
 .section__home {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     padding: var(--padding-5px) var(--padding-25px);
 }
 
@@ -208,8 +208,8 @@ main {
 /*=============== CONTENT ===============*/
 .content__container {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
+    width: 100%;
 }
 
 
@@ -222,7 +222,7 @@ main {
 }
 
 .content__left {
-    width: 70%;
+    width: 60%;
 }
 
 .image {
@@ -263,7 +263,7 @@ main {
     background-color: var(--base-color);
     padding: 0.1rem;
     margin-top: var(--padding-40px);
-    width: 20%; 
+    width: 10%; 
 }
 
 
@@ -274,6 +274,7 @@ main {
     display: flex;
     flex-direction: column;
     background-color: var(--base-color);
+    /* margin-right: calc(var(--padding-50px) * 2); */
 }
 
 form {
@@ -383,11 +384,10 @@ button:hover {
 }
 
 .product {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    padding: var(--padding-16px);
-    margin-top: var(--padding-40px);
+    margin: var(--padding-40px) 0;
 }
 
 .product_space {
