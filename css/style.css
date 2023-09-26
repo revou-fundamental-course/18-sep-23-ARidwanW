@@ -173,11 +173,11 @@ header h2 {
 }
 
 .nav__home {
-    border-radius: var(--padding-5px) 0 0 var(--padding-5px);            /*  ! ujung kiri atas bawah lengkung*/
+    border-radius: 0.3125rem 0 0 0.3125rem;            /*  ! ujung kiri atas bawah lengkung*/
 }
 
 .nav__call-us {
-    border-radius: 0 var(--padding-5px) var(--padding-5px) 0;           /*  ! ujung kanan atas bawah lengkung*/
+    border-radius: 0 0.3125rem 0.3125rem 0;           /*  ! ujung kanan atas bawah lengkung*/
 }
 
 
@@ -305,12 +305,11 @@ input, select, button {
     margin-bottom: var(--padding-10px);
     padding: 0.75rem 0.5rem;
     border: 2px solid #c9d3dd;
-    border-radius: var(--padding-5px);
+    border-radius: 0.3125rem;
 }
 
 button {
     border: none;
-    border-radius: var(--padding-5px);
     background-color: var(--button-color);
     color: white;
     margin-top: var(--padding-10px);
