@@ -229,9 +229,26 @@ function resetDivsPackage() {
 
 
 
+// * tambahan slider image
+// const carouselSlides = document.querySelectorAll(".image");
+// let currentIndex = 0;   // gambar ke-1, index ke-0
+// let interval = 2000;    // 2 detik
 
+// function nextSlide() {
+//     carouselSlides[currentIndex].classList.remove("active");        // pastikan gambar dengan index=currentIndex memiliki class="active"
+//     currentIndex = (currentIndex + 1) % carouselSlides.length;      // update currentIndex selanjutnya, pakai modulus agar tidak melebihi max arraynya
+//     carouselSlides[currentIndex].classList.add("active");
+// }
 
+// // untuk mullai slidernya tiap interval ms
+// function startSlide() {
+//     setInterval(nextSlide, interval);
+// }
 
+// //iife --> langsung jalan saat web sudah loading
+// (function() {
+//     startSlide();
+// })
 
 
 
