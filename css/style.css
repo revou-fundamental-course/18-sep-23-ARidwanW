@@ -362,13 +362,14 @@ button:hover {
 /* !=============== PRODUCT ===============*/
 .product__container {                               /* ! Sama seperti content container */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-around; */
 }
 
 .product {
     width: 60%;
     display: flex;
     flex-direction: column;
+    padding-left: calc(var(--padding-35px) * 2);
     margin: var(--padding-40px) 0;
 }
 
@@ -614,6 +615,13 @@ button:hover {
     button,
     select {
         font-size: var(--small-font-size);
+    }
+
+    /* *=============== PRODUCT ===============*/
+
+
+    .product {
+        padding: 0;
     }
 
 
