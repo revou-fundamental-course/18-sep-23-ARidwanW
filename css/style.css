@@ -45,33 +45,8 @@
   --border-input-color: #c9d3dd;
 }
 
-/* Responsive typography */
-@media only screen and (max-width: 768px) {
-    :root {
-        --biggest-font-size: 1.75rem;
-        --h1-font-size: 1.5rem;
-        --h2-font-size: 1.25rem;
-        --h3-font-size: 1rem;
-        --normal-font-size: .938rem;
-        --small-font-size: .813rem;
-        --smaller-font-size: .75rem;
-        --tiny-font-size: .625rem;
 
-        --padding-5px: 0.125rem;
-        --padding-8px: 0.195rem;
-        --padding-10px: 0.225rem;
-        --padding-16px: 0.25rem;
-        --padding-20px: 0.5rem;
-        --padding-25px: 0.8125rem;
-        --padding-30px: 1.125rem;
-        --padding-35px: 1.4375rem;
-        --padding-40px: 1.75rem;
-        --padding-50px: 2.375rem;
-    }
-}
-
-
-/*=============== BASE ===============*/
+/* !=============== BASE ===============*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -123,7 +98,7 @@ main{
 }
 
 
-/*=============== REUSABLE ===============*/
+/* !=============== REUSABLE ===============*/
 .circle, .circle-2 {
     font-size: var(--normal-font-size);
     background-color: var(--base-color);
@@ -137,7 +112,7 @@ main{
 }
 
 
-/*=============== HEADER & NAV ===============*/
+/* !=============== HEADER & NAV ===============*/
 header {
     top: 0;
     left: 0;
@@ -181,7 +156,7 @@ header h2 {
 }
 
 
-/*=============== MAIN ===============*/
+/* !=============== MAIN ===============*/
 main {
     display: flex;
     flex-direction: column;
@@ -189,7 +164,7 @@ main {
 }
 
 
-/*=============== HOME & TITLE ===============*/
+/* !=============== HOME & TITLE ===============*/
 .section__home {
     display: flex;
     flex-direction: column;
@@ -204,8 +179,12 @@ main {
     padding: var(--padding-20px) 0 var(--padding-40px) 0;
 }
 
+/* .title {
+    font-size: var(--h1-font-size);
+} */
 
-/*=============== CONTENT ===============*/
+
+/* !=============== CONTENT ===============*/
 .content__container {
     display: flex;
     justify-content: space-between;
@@ -213,7 +192,7 @@ main {
 }
 
 
-/*=============== CONTENT LEFT ===============*/
+/* !=============== CONTENT LEFT ===============*/
 .content__left, 
 .content__left-image {
     display: flex;
@@ -267,7 +246,7 @@ main {
 }
 
 
-/*=============== CONTENT RIGHT ===============*/
+/* !=============== CONTENT RIGHT ===============*/
 .content__right {
     width: 27%;
     padding: var(--padding-40px);
@@ -336,7 +315,7 @@ p {
 .success-message {
     background-color: white;
     padding: var(--padding-20px);
-    border-radius: var(--padding-5px);
+    border-radius: 0.3125rem;
     box-shadow: 0 0 var(--padding-10px) rgba(0, 0, 0, 0.5);
     width: 30%;
     display: flex;
@@ -377,7 +356,7 @@ button:hover {
 }
 
 
-/*=============== PRODUCT ===============*/
+/* !=============== PRODUCT ===============*/
 .product__container {                               /* ! Sama seperti content container */
     display: flex;
     justify-content: space-between;
@@ -433,7 +412,7 @@ button:hover {
 }
 
 
-/*=============== OUR PACKAGE ===============*/
+/* !=============== OUR PACKAGE ===============*/
 .section__our-package {
     display: flex;
     flex-direction: column;
@@ -458,6 +437,7 @@ button:hover {
 .our__package-content {
     display: flex;
     justify-content: center;
+    margin-bottom: var(--padding-35px);
 }
 
 .our__package-bar {
@@ -471,8 +451,8 @@ button:hover {
 .package__point-container {
     display: flex;
     flex-direction: column;
-    width: 20%;   
-    margin-bottom: var(--padding-35px);
+    width: 24%;   
+    /* margin-bottom: var(--padding-35px); */
 }
 
 .package__point {
@@ -504,7 +484,7 @@ button:hover {
 }
 
 
-/*=============== CALL US ===============*/
+/* !=============== CALL US ===============*/
 .section__call-us {
     display: flex;
     flex-direction: column;
@@ -528,6 +508,7 @@ button:hover {
 .call__us-header span {
     width: 40%;
     font-size: var(--small-font-size);
+    text-align: center;
 }
 
 .call__us-button {
@@ -542,7 +523,7 @@ button:hover {
 }
 
 
-/*=============== FOOTER ===============*/
+/* !=============== FOOTER ===============*/
 .footer {
     margin: var(--padding-40px) 0;
     display: flex;
@@ -565,9 +546,96 @@ button:hover {
 
 
 
+/* ! ============================================================ ! */
 
 
 
+/* Responsive typography fot tablet*/
+@media only screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 1.75rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+        --tiny-font-size: .625rem;
+        
+        --padding-5px: 0.125rem;
+        --padding-8px: 0.195rem;
+        --padding-10px: 0.225rem;
+        --padding-16px: 0.25rem;
+        --padding-20px: 0.5rem;
+        --padding-25px: 0.8125rem;
+        --padding-30px: 1.125rem;
+        --padding-35px: 1.4375rem;
+        --padding-40px: 1.75rem;
+        --padding-50px: 2.375rem;
+    }
+
+    /* *=============== CONTENT ===============*/
+    .content__container {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    
+    /* *=============== CONTENT LEFT ===============*/
+    .content__left {
+        width: 60%;
+    }
+    
+    
+    /* *=============== CONTENT RIGHT ===============*/
+    .content__right {
+        width: 37%;
+    }
+
+    label {
+        font-size: var(--small-font-size);
+    }
+
+    input, 
+    select, 
+    button {
+        margin-bottom: var(--padding-10px);
+        padding: 0.5rem 0.5rem;
+    }
+
+    input[placeholder],
+    button,
+    select {
+        font-size: var(--small-font-size);
+    }
 
 
+    /* *=============== OUR Package ===============*/
+    .package__point-container {
+        width: 30%;
+    }
+
+
+    /* *=============== OUR Package ===============*/
+    .call__us-header span {
+        width: 50%;
+    }
+
+
+    /* *=============== FOOTER ===============*/
+    .policy,
+    .copyright {
+        font-size: var(--small-font-size);
+    }
+}
+    
+    
+
+/* ! ============================================================ ! */
+/* Responsive typography fot mobile*/
+@media only screen and (max-width: 600px) {
+
+}
 
