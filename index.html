@@ -20,7 +20,7 @@
         </div>
 
         <nav class="nav__container">
-            <a href="#title" class="nav__item nav__home">Home</a>
+            <a href="#banner" class="nav__item nav__home">Home</a>
             <a href="#section__our-package" class="nav__item nav__our-package">Our Package</a>
             <a href="#section__call-us" class="nav__item nav__call-us">Call Us</a>
         </nav>
@@ -35,12 +35,14 @@
                 <div class="subtitle"><span>Everyday with best ingredients</span></div>
             </div>
 
+            <div class="banner" id="banner"></div>
+
              <!--=============== CONTENT ===============-->
             <div class="content__container">
                  <!--=============== CONTENT LEFT ===============-->
                 <div class="content__left">
                     <div class="content__left-image">
-                        <img class="image" src="assets/placeholder-image.png" alt="slider image" id="image">
+                        <img class="image" src="assets/buah-buah.jpeg" alt="slider image" id="image">
                         <span class="image-tag"><i>"Setiap hari beli sayur buah yang fresh di sini"</i></span>
                     </div>
 
@@ -50,8 +52,68 @@
                         </div>
 
                         <div class="customer__name-container">
-                            <span class="customer__name"><b>Nama Customer</b></span>
-                            <span class="pekerjaan__umur"><i>Pekerjaan, 23</i></span>
+                            <span class="customer__name"><b>Chelsea Islan</b></span>
+                            <span class="pekerjaan__umur"><i>Artist, 28</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/kitchen-winter.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Kitchen Set di sini sangat lengkap"</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Kim Minjeong</b></span>
+                            <span class="pekerjaan__umur"><i>Singer & Dancer, 22</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/sayur-bumbu.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Rempah-rempah terbaik di Indonesia"</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Juna Rorimpandey</b></span>
+                            <span class="pekerjaan__umur"><i>Chef, 48</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/cookbook.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Ide masak selalu ada di sini"</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Nancy J. McDonie</b></span>
+                            <span class="pekerjaan__umur"><i>Singer, 23</i></span>
                         </div>
                     </div>
 
@@ -66,7 +128,7 @@
                     </div>
 
                      <!--=============== FORM ===============-->
-                    <form name="contact-form" onsubmit="return validateForm()">     <!-- !jangan lupa onsubmit -->
+                    <form name="contact-form" onsubmit="return validateForm()">     <!-- ! onsubmit="return validateForm()" jangan lupa onsubmit -->
                         <label for="your-name">Your Name:<span>*</span></label>
                         <input type="text" name="your-name" id="your-name" placeholder="First and last name">
                         <p id="error-name"></p>
@@ -93,7 +155,7 @@
                         <div class="success-message">
                             <p id="send-success"></p>
 
-                            <button id="close-button" class="circle" onclick="window.location.reload()">
+                            <button id="close-button" class="circle" onclick="window.location.reload()"> <!-- ! refresh setelah di klik -->
                                 <i class='bx bxs-x-circle' ></i>
                             </button>
                         </div>
@@ -156,7 +218,7 @@
 
             <div class="our__package-content-container">
                 <div class="our__package-content">
-                    <div class="package__point-container">
+                    <div class="package__point-container top-package">
                         <div class="package__point">
                             <div class="circle">
                                 <i class='bx bx-bulb'></i>
@@ -171,7 +233,7 @@
                         <span class="package__point-text">Sayuran segar langsung dari sumber pertanian terbaik</span>
                     </div>
 
-                    <div class="package__point-container">
+                    <div class="package__point-container top-package">
                         <div class="package__point">
                             <div class="circle">
                                 <i class='bx bx-bulb'></i>
@@ -186,7 +248,7 @@
                         <span class="package__point-text">Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</span>
                     </div>
 
-                    <div class="package__point-container">
+                    <div class="package__point-container top-package">
                         <div class="package__point">
                             <div class="circle">
                                 <i class='bx bx-bulb'></i>
@@ -205,7 +267,7 @@
                 <div class="our__package-bar"></div>
 
                 <div class="our__package-content">
-                    <div class="package__point-container">
+                    <div class="package__point-container bottom-package">
                         <div class="package__point">
                             <div class="circle-2">
                                 <i class='bx bxs-star' ></i>
@@ -220,7 +282,7 @@
                         <span class="package__point-text">Bumbu dapur lengkap untuk keperluan memasak kamu</span>
                     </div>
 
-                    <div class="package__point-container">
+                    <div class="package__point-container bottom-package">
                         <div class="package__point">
                             <div class="circle-2">
                                 <i class='bx bxs-star' ></i>
@@ -235,7 +297,7 @@
                         <span class="package__point-text">Segala jenis alat masak untuk membantu kamu memasak</span>
                     </div>
 
-                    <div class="package__point-container">
+                    <div class="package__point-container bottom-package">
                         <div class="package__point">
                             <div class="circle-2">
                                 <i class='bx bxs-star' ></i>

@@ -179,15 +179,15 @@ main {
     padding: var(--padding-20px) 0 var(--padding-40px) 0;
 }
 
-/* .title {
-    font-size: var(--h1-font-size);
-} */
+.banner {
+    margin-bottom: var(--padding-10px);
+}
 
 
 /* !=============== CONTENT ===============*/
 .content__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -206,6 +206,8 @@ main {
 
 .image {
     border: 1px solid black;
+    width: 100%;
+    height: auto;
 }
 
 .image-tag {
@@ -439,6 +441,7 @@ button:hover {
     display: flex;
     justify-content: center;
     margin-bottom: var(--padding-35px);
+    /* padding-bottom: var(--padding-50px); */
 }
 
 .our__package-bar {
@@ -682,6 +685,30 @@ button:hover {
 
     /* ??=============== OUR PACKAGE ===============*/
     /* !butuh slider untuk mobile L ke bawah */
+    /* .our__package-content-container {
+        min-height: 350px;
+        overflow: hidden;
+    } */
+
+    .our__package-content {
+        min-height: 120px;
+    }
+
+    .package__point-container {
+        width: 80%;
+        align-items: center;
+    }
+
+    /* .package__point {
+        padding-left: calc(var(--padding-35px) * 2);
+    } */
+
+    .package__point-text {
+        width: 50%;
+        align-self: center;
+        padding-left: 0;
+        text-align: center;
+    }
 
 
     /* *=============== CALL US ===============*/
@@ -722,13 +749,14 @@ button:hover {
         flex-direction: column;
         align-items: stretch;
         border: none;
+        padding: 0;
     }
 
     .nav__item {
         border: none;
         border-bottom: 2px solid var(--base-color);
         width: 100%;
-
+        padding: var(--padding-16px) 0;
     }
 
 
@@ -739,6 +767,10 @@ button:hover {
 
     /* ??=============== OUR PACKAGE ===============*/
     /* !butuh slider untuk mobile L ke bawah */
+    .package__point-text {
+        width: 80%;
+        align-self: center;
+    }
     
 
     /* *=============== CALL US ===============*/
