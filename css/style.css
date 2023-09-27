@@ -210,6 +210,7 @@ main {
 
 .image-tag {
     margin-top: var(--padding-30px);
+    text-align: center;
 }
 
 .content__left-customer {
@@ -499,6 +500,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .call__us-header h1 {
@@ -508,7 +510,7 @@ button:hover {
 .call__us-header span {
     width: 40%;
     font-size: var(--small-font-size);
-    text-align: center;
+    /* text-align: center; */
 }
 
 .call__us-button {
@@ -612,15 +614,19 @@ button:hover {
     }
 
 
-    /* *=============== OUR Package ===============*/
+    /* *=============== OUR PACKAGE ===============*/
     .package__point-container {
         width: 30%;
     }
 
 
-    /* *=============== OUR Package ===============*/
+    /* *=============== CALL US ===============*/
     .call__us-header span {
         width: 50%;
+    }
+
+    .call__us-button button {
+        width: 20%;
     }
 
 
@@ -634,8 +640,110 @@ button:hover {
     
 
 /* ! ============================================================ ! */
-/* Responsive typography fot mobile*/
+/* Responsive typography fot mobile l*/
 @media only screen and (max-width: 600px) {
+    /* *=============== TITLE ===============*/
+    .title {
+        text-align: center;
+    }
 
+
+    /* *=============== CONTENT ===============*/
+    .content__container {
+        flex-direction: column;
+    }
+
+
+    /* *=============== CONTENT LEFT ===============*/
+    .content__left {
+        width: 100%;
+    }
+
+    .content__left-customer {
+        width: 50%;
+    }
+    
+    
+    /* *=============== CONTENT RIGHT ===============*/
+    .content__right {
+        width: 80%;
+        align-self: center;
+    }
+
+
+    /* *=============== PRODUCT ===============*/
+    .product__container {
+        justify-content: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    /* ??=============== OUR PACKAGE ===============*/
+    /* !butuh slider untuk mobile L ke bawah */
+
+
+    /* *=============== CALL US ===============*/
+    .call__us-header span {
+        width: 80%;
+    }
+
+    .call__us-button button {
+        width: 40%;
+    }
+}
+
+
+/* ! ============================================================ ! */
+/* Responsive typography fot mobile*/
+@media only screen and (max-width: 414px) {
+    /* *=============== BASE ===============*/
+    body,
+    button,
+    input,
+    select {
+        font-size: var(--small-font-size);
+    }
+
+
+    /* *=============== HEADER & NAV ===============*/
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo__container {
+        margin-bottom: var(--padding-10px);
+        border-bottom: 1px solid grey;
+    }
+
+    .nav__container {
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+    }
+
+    .nav__item {
+        border: none;
+        border-bottom: 2px solid var(--base-color);
+        width: 100%;
+
+    }
+
+
+    /* *=============== CONTENT LEFT ===============*/
+    .content__left-customer {
+        width: 70%;
+    }
+
+    /* ??=============== OUR PACKAGE ===============*/
+    /* !butuh slider untuk mobile L ke bawah */
+    
+
+    /* *=============== CALL US ===============*/
+    .call__us-button button {
+        width: 50%;
+    }
 }
 
